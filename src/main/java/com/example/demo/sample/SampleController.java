@@ -28,4 +28,10 @@ public class SampleController {
 		SampleEntity sampleEntity = this.sampleService.SaveSampleEntity(value);
 		return sampleEntity.getSampleValue()+" saved";
 	}
+	
+	@GetMapping("/invokeServerError")
+	public String InsertSampleEntity() {
+		Integer.parseInt("ss");
+		return "error";
+	}
 }
